@@ -33,22 +33,6 @@ def set_value(formula):
     elif formula == '':
         lbl['text'] = '0'
 
-    if lbl['text'][0] == '0' and len(lbl['text']) > 1:
-        lbl['text'] = lbl['text'].strip('0')
-
-    if 'Error' in lbl['text']:
-        lbl['text'] = lbl['text'].replace('Error', '0')
-    else:
-        try:
-            print(lbl['text'])
-            if lbl['text'][-1] == '0' and lbl['text'][-2] == '/':
-                lbl['text'] = 'Error'
-            else:
-                print(lbl['text'])
-                lbl['text'] = str(eval(formula))
-        except (ZeroDivisionError, IndexError):
-            pass
-
 
 def logicalc(operation):
     print(f'logicalc: {operation}')
