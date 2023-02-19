@@ -17,7 +17,7 @@ def press_key(event):
     if ch.isdigit() or ch in operandes or ch in ('(', ')'):
         lbl['text'] += ch
 
-
+a = 0
 def double_operands(text):
     for i in range(len(text) - 1):
         if text[i] in operandes and text[i + 1] in operandes or text[i + 1] == '0':
